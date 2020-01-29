@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <wbtextlocal>
+            <general>
+                <enable>1</enable>
+                <account_id>XXXXXXX</account_id>
+                <account_token>XXXXX-XXXXX-XXXXX</account_token>
+            </general>
+            <otp>
+                <mb_required>1</mb_required>
+                <enable_otp>1</enable_otp>
+                <generate_otp_msg>Your generated OTP for account creation is {{otp}}.</generate_otp_msg>
+                <regenerate_otp_msg>Your re-genrated OTP for account creation is {{otp}}.</regenerate_otp_msg>
+                <otp_type>numeric</otp_type>
+                <otplen>4</otplen>
+                <otptime>2</otptime>
+            </otp>
+            <customer_registration>
+                <enable>1</enable>
+                <customer_message>Hello {{name}}, you have registered succesfully as customer.</customer_message>
+                <admin_sms>1</admin_sms>
+                <number>XXXXXXXXXX</number>
+                <admin_message>A new customer has been registered succesfully.</admin_message>
+            </customer_registration>
+            <customer_order>
+                <enable>1</enable>
+                <customer_message>Hello {{name}} !, your order has been succesfully placed with order ID {{order_id}}.</customer_message>
+                <admin_sms>1</admin_sms>
+                <number>XXXXXXXXXX</number>
+                <admin_message>New order has been placed with order ID {{order_id}}.</admin_message>
+            </customer_order>
+            <customer_order_status>
+                <enable>1</enable>
+                <customer_message_pending>Hello {{name}}, your order having order ID {{order_id}}, status change to {{order_status}}.</customer_message_pending>
+                <customer_message_processing>Hello {{name}}, your order having order ID {{order_id}}, status change to {{order_status}}.</customer_message_processing>
+                <customer_message_complete>Hello {{name}}, your order having order ID {{order_id}}, status change to {{order_status}}.</customer_message_complete>
+                <customer_message_closed>Hello {{name}}, your order having order ID {{order_id}}, status change to {{order_status}}.</customer_message_closed>
+                <admin_sms>1</admin_sms>
+                <number>XXXXXXXXXX</number>
+                <admin_message_pending>Order with ID {{order_id}} status change to {{order_status}}.</admin_message_pending>
+                <admin_message_processing>Order with ID {{order_id}} status change to {{order_status}}.</admin_message_processing>
+                <admin_message_complete>Order with ID {{order_id}} status change to {{order_status}}.</admin_message_complete>
+                <admin_message_closed>Order with ID {{order_id}} status change to {{order_status}}.</admin_message_closed>
+            </customer_order_status>
+        </wbtextlocal>
+    </default>
+</config>

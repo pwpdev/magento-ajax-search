@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="wbsearch" showInDefault="1" showInWebsite="1" showInStore="1" type="text" translate="label" sortOrder="100">
+            <label>Ajax Search</label>
+            <tab>wbcomcore</tab>
+            <resource>Wbcom_AjaxSearch::search_config</resource>
+            <group id="general" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30">
+                <label>General Setting</label>
+                <field id="enable" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="search_query" translate="label" type="multiselect" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Search Query In</label>
+                    <source_model>Wbcom\AjaxSearch\Model\Config\Source\ListMode</source_model>
+                    <validate>required-entry validate-select</validate>
+                    <comment>Search query for result in product options.</comment>
+                </field>
+                <field id="search_info" translate="label" type="multiselect" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Display Info In Search Result</label>
+                    <source_model>Wbcom\AjaxSearch\Model\Config\Source\SearchInfo</source_model>
+                    <validate>required-entry validate-select</validate>
+                    <comment>Display Infomation in search result.</comment>
+                </field>
+                <field id="max_search_result" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Maximum Search Result</label>
+                    <comment>Number of product listing shown in serach result.</comment>
+                </field>
+            </group>
+            <group id="search_option" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30">
+                <label>Search Suggestion Options</label>
+                <field id="enable" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Search Suggestion</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="search_info" translate="label" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Default Search Suggestion Type</label>
+                    <source_model>Wbcom\AjaxSearch\Model\Config\Source\SearchSuggestion</source_model>
+                    <validate>required-entry validate-select</validate>
+                    <comment>Display default list of products for search suggestion.</comment>
+                </field>
+            </group>
+            <group id="search_bycat" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30">
+                <label>Category On Search</label>
+                <field id="enable" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Category On Search</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="depth" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Depth For Category Listing</label>
+                    <comment>Level for category listing.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

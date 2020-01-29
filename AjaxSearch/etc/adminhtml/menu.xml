@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Wbcom_AjaxSearch::ajaxsearch" title="Ajax Search"
+             translate="title" module="Wbcom_AjaxSearch"
+             parent="Wbcom_Core::Wbcom" sortOrder="15"
+             resource="Wbcom_AjaxSearch::ajaxsearch" dependsOnConfig="wbsearch/general/enable" />
+
+        <add id="Wbcom_AjaxSearch::manage_ajaxsearch"
+             title="Manage Search Keywords" module="Wbcom_AjaxSearch"
+             sortOrder="16" action="wbsearch/query/index"
+             resource="Wbcom_AjaxSearch::manage_ajaxsearch"
+             parent="Wbcom_AjaxSearch::ajaxsearch"/>
+
+        <add id="Wbcom_AjaxSearch::search_config"
+             title="Configuration" module="Wbcom_AjaxSearch"
+             sortOrder="17" parent="Wbcom_AjaxSearch::ajaxsearch"
+             action="adminhtml/system_config/edit/section/wbsearch"
+             resource="Wbcom_AjaxSearch::search_config"/>
+    </menu>
+</config>
